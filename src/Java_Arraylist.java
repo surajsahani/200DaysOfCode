@@ -1,36 +1,44 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
 
 public class Java_Arraylist {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner in = new Scanner(System.in);
-		int n =in.nextInt();
-		ArrayList<ArrayList<Integer>> rows = new ArrayList<>();
 		
-		for (int i =0; i <n ; i++) {
+		Scanner sc = new Scanner(System.in);
+		int numLines = Integer.parseInt(sc.nextLine());
+		ArrayList<ArrayList> listArray = new ArrayList<>();
+		
+		for (int i =0; i <numLines ; i++) {
+			int numOfIntegers = sc.nextInt();
+			ArrayList<Integer> intArrayList = new ArrayList<>();
 			
-			int d = in.nextInt();
-			ArrayList<Integer> row = new ArrayList<>();
-			
-			for (int j=0;j<d;j++) {
-				row.add(in.nextInt());
+			for (int j=0;j<numOfIntegers;j++) {
+				intArrayList.add(new Integer(sc.nextInt()));
+//				row.add(in.nextInt());
 				
 			}
-			rows.add(row);
+			listArray.add(intArrayList);
+			sc.nextLine();
 		}
-		int q = in.nextInt();
+		int numQueries = Integer.parseInt(sc.next());
+//		int q = in.nextInt();
 		
-		for (int i=0; i<q; i++) {
-			int x = in.nextInt();
-			int y=in.nextInt();
-			
-			try {
-				System.out.println(rows.get(-1).get(y-1));
-			} catch(IndexOutOfBoundsException e) {
+		for (int i=0; i<numQueries; i++) {
+			int x = sc.nextInt()-1;
+			int y=sc.nextInt()-1;
+			sc.nextLine();
+			if(x<listArray.size() && y<listArray.get(x).size()) {
+				System.out.println(listArray.get(x).get(y));
+			} else {
 				System.out.println("ERROR");
 			}
+
 		}
 	}
 
