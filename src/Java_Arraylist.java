@@ -20,14 +20,12 @@ public class Java_Arraylist {
 			
 			for (int j=0;j<numOfIntegers;j++) {
 				intArrayList.add(new Integer(sc.nextInt()));
-//				row.add(in.nextInt());
 				
 			}
 			listArray.add(intArrayList);
 			sc.nextLine();
 		}
 		int numQueries = Integer.parseInt(sc.next());
-//		int q = in.nextInt();
 		
 		for (int i=0; i<numQueries; i++) {
 			int x = sc.nextInt()-1;
