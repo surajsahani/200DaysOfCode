@@ -1,3 +1,4 @@
+package amazone;
 import java.io.*;
 import java.util.*;
 
