@@ -72,8 +72,8 @@ class LinkedList {
 	
 	public Node find(String data) {
 		Node temp = this.head;
-		// Tranvers the list and return the node
-		// if the data of it matches with the searched fata
+		// transverse the list and return the node
+		// if the data of it matches with the searched data
 		while ( temp !=null) {
 			if (temp.getData().equals(data))
 				return temp;
@@ -103,19 +103,63 @@ class LinkedList {
 				System.out.println("Node not found");
 		}
 	}
-}
-
-
-public class linked_list {
-
+	
+	public void delete(String data) {
+		//CHeck if the list is empty,
+		// if yes, make the node as the head and the tail
+		if(this.head == null)
+			System.out.println("List is empty");
+		else {
+			//Find the node to be deleted
+			Node node = this.find(data);
+			// If the node is not found
+			if (node == null)
+				System.out.println("Node not found");
+			// If the node to be deleted is the head node
+			else if (node == this.head) {
+				this.head = this.head.getNext();
+				node.setNext(null);
+				// If the node to be deleted is also the tail node
+				if (node == this.tail)
+					tail = null;
+			} else {
+				// Traverse to the node present before the node to be deleted
+				Node nodeBefore = null;
+				Node temp = this.head;
+				while (temp != null) {
+					if(temp.getNext() == node) {
+						nodeBefore = temp;
+						break;
+					}
+					temp = temp.getNext();
+				}
+				//Remove the node
+				 //If the node to be deleted is the tail node,
+				 // then make the previous node as the tail
+				if (node == this.tail)
+					this.tail = nodeBefore;
+				node.setNext(null);
+			}
+		}
+	}
 	public static void main(String args[]) {
 		LinkedList list = new LinkedList();
 		list.addAtEnd("Milan");
 		list.addAtEnd("Venice");
 		list.addAtEnd("Munich");
+		list.addAtEnd("Prague");
+		list.addAtEnd("Vienna");
 		list.addAtBegining("Nice");
 		list.display();
-	
-	}
-	
+		System.out.println("--------------------");
+		list.delete("Venice");
+		list.display();
+
+		/*
+		 * if(list.find("Munich")!=null) System.out.println("Node found");else
+		 * System.out.println("Node not found");
+		 */
+		
+		}
 }
+
