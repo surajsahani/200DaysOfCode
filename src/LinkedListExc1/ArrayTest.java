@@ -8,7 +8,6 @@ class ArrayTest {
 			//Moving each element one position to its right
 			ar[i]=ar[i-1];
 		}
-		
 		//Inserting the data at the specific position
 		ar[pos-1]=val;
 	}
@@ -23,9 +22,10 @@ class Tester {
 		 arr[2]='C';
 		 arr[3]='D';
 		 arr[4]='E';
+		
 		 
 		 //Make changes and try to insert elements at different positions
-		 ArrayTest.insert(arr, 3, 'J');
+		 ArrayTest.insert(arr, 7, 'J');
 		 for(int i=0; i<arr.length;i++)
 			 System.out.println(arr[i]);
 	 }

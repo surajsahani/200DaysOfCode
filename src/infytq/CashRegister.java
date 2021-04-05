@@ -52,7 +52,7 @@ public class CashRegister {
         balance = round(balance, 2);
 
         if (balance < 0) {
-            return null;
+            return null;    
         } else if (balance == 0) {
             return Collections.singletonList(BillCoin.ZERO);
         }
