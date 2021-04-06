@@ -12,6 +12,9 @@ public class Main {
 	
 	double traingleBArea = traingleB.findArea();
 	System.out.println(traingleBArea);
+	
+	System.out.println(traingleA.sideLenThree);
+	System.out.println(traingleB.base);
 	}
 }
  
