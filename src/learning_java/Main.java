@@ -4,19 +4,11 @@ public class Main {
 
 	
 	public static void main(String[] args) {
-	Traingle traingleA = new Traingle(15,8,15,8,17);
-	Traingle traingleB = new Traingle(3,2.589,3,3,3);
-	
-	double traingleAArea = traingleA.findArea();
-	System.out.println(traingleAArea);
-	
-	double traingleBArea = traingleB.findArea();
-	System.out.println(traingleBArea);
-	
-	System.out.println(traingleA.sideLenThree);
-	System.out.println(traingleB.base);
-	
-	System.out.println(Traingle.numOfSide);
+		StudentProfile profileOne = new StudentProfile("Sally","Salmon", "Film", 3.75, 2022);
+		StudentProfile profileTwo = new StudentProfile("Max","Tiffen", "Computer Science", 3.45, 2021);
+
+		profileTwo.increamentExpectedGraduateYear();
+		System.out.println(profileTwo.expectedYearToGraduate);
 	}
 }
  
