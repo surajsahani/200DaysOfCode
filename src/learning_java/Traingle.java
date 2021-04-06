@@ -1,6 +1,9 @@
 package learning_java;
 
 public class Traingle {
+	
+	static int numOfSide =3;
+	
 	double base;
 	double height;
 	double sideLenOne;

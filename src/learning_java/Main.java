@@ -15,6 +15,8 @@ public class Main {
 	
 	System.out.println(traingleA.sideLenThree);
 	System.out.println(traingleB.base);
+	
+	System.out.println(Traingle.numOfSide);
 	}
 }
  
