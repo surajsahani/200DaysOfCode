@@ -1,31 +1,25 @@
 package learning_java;
 import java.util.Scanner;
 public class Main {
-
+	
+	public static void announceDeveloperTeaTime() {
+		System.out.println("Waiting for developer tea time...");
+		System.out.println("Type in a random word and press Enter to start developer tea time");
+		Scanner input = new Scanner(System.in);
+		input.next();
+		System.out.println("It's developer tea time!");
+	}
 	public static void main(String[] args) {
-
-        System.out.println("Let's calculate the area of a triangle");
-
-        Scanner input = new Scanner(System.in);
-
-        System.out.println("Please input the base of the triangle (in inches).");
-        double base = input.nextDouble();
-
-        while (base <= 0) {
-            System.out.println("That's invalid. Please input the base of the triangle (in inches).");
-            base = input.nextDouble();
-        }
-
-        System.out.println("Please input the height of the triangle (in inches).");
-        double height = input.nextDouble();
-        while (height <= 0) {
-            System.out.println("That's invalid. Please input the height of the triangle (in inches).");
-            base = input.nextDouble();
-        }
-
-        double area = (base * height) /2;
-        System.out.println("The area is " + area);
-
-    }
+		System.out.println("Welcome to your new job");
+		
+		announceDeveloperTeaTime();
+		
+		System.out.println("Write code");
+		System.out.println("Review code");
+		
+		announceDeveloperTeaTime();
+		
+		System.out.println("Get promoted!");
+	}
 }
  
