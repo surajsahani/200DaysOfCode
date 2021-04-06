@@ -1,26 +1,17 @@
 package learning_java;
 import java.util.Scanner;
 public class Main {
-	
-	public static double salaryCalculator(double hoursPerWeek, 
-			                              double amountPerHour,
-			                              int vacationDays) {
-		if (hoursPerWeek < 0) {
-			return -1;
-		}
-		
-		if (amountPerHour < 0) {
-			return -1;
-		}
-		
-		double weeklyPayCheck = hoursPerWeek * amountPerHour;
-		double unpaidTime = vacationDays * amountPerHour * 8;
-		return (weeklyPayCheck * 52) - unpaidTime;
-	}
+
 	
 	public static void main(String[] args) {
-		double salary = salaryCalculator(40,15,8);
-		System.out.println(salary);
+	Traingle traingleA = new Traingle(15,8,15,8,17);
+	Traingle traingleB = new Traingle(3,2.589,3,3,3);
+	
+	double traingleAArea = traingleA.findArea();
+	System.out.println(traingleAArea);
+	
+	double traingleBArea = traingleB.findArea();
+	System.out.println(traingleBArea);
 	}
 }
  
