@@ -7,6 +7,7 @@ String declaredMajor;
 double gpa;
 int expectedYearToGraduate;
 
+
 public StudentProfile(String firstName, String lastName,
 		String declaredMajor, double gpa, int expectedYearToGraduate) {
 	this.firstName = firstName;

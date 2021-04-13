@@ -5,7 +5,7 @@ class ArrayTest {
 	public static void insert(char[] ar, int pos, char val) {
 		// Traversing the array from the last position where the element has to be inserted
 		for(int i=ar.length-1;i>=pos;i--) {
-			//Moving each element one position to its right
+			//Moving each element one .position to its right
 			ar[i]=ar[i-1];
 		}
 		
