@@ -2,7 +2,7 @@ package JavaEssentialTraining;
 
 import java.util.Scanner;
 
-public class multipleValues {
+public class Builder {
 	public static void main(String[] args) {
 		
 		String str1 = "Hello";
@@ -11,21 +11,21 @@ public class multipleValues {
 		System.out.println(str3);
 		
 		StringBuilder sb = new StringBuilder("Hello")
-				.append(",")
+				.append(", ")
 				.append("World")
 				.append("!");
 		System.out.println(sb);
 		
-		Scanner scanner = new Scanner (System.in);
-		System.out.print("Enter Value: ");
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter value: ");
 		String input = scanner.nextLine();
 		System.out.println(input);
 		
 		sb.delete(0, sb.length());
-		for (int i = 0; i < 3; i++) {
+		for(int i = 0; i <3; i++) {
 			input = scanner.nextLine();
 			sb.append(input + "\n");
 		}
-		System.out.println(sb.toString());
+		System.out.println(sb);
 	}
 }
