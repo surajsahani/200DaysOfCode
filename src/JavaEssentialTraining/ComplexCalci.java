@@ -3,9 +3,9 @@ package JavaEssentialTraining;
 import java.util.Scanner;
 
 public class ComplexCalci {
-	
+
 	public static void main(String[] args) {
-		
+
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter a numeric value: ");
 		String input = sc.next();
@@ -15,9 +15,9 @@ public class ComplexCalci {
 		double d2 = Double.parseDouble(inputtwo);
 		System.out.println("Choose an operation (+, -, *, /)");
 		String inputthree = sc.next();
-				
+
 		try {
-			
+
 			switch (inputthree) {
 			case "+":
 				double result = d1 + d2;
@@ -35,10 +35,13 @@ public class ComplexCalci {
 				double resultmodule = d1 / d2;
 				System.out.println("The division of number is " + resultmodule);
 				break;
+			default:
+				System.out.println("Unrecoganized operation!");
+				return;
 			}
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("Number formatting exception " +e.getMessage());
+//			e.printStackTrace();
 		}
 	}
 }
