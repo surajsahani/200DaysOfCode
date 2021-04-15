@@ -1,6 +1,7 @@
 package JavaEssentialTraining;
 
 public class comparetwoString {
+	
 	public static void main(String[] args) {
 		
 		String str1 = "Hello";
@@ -19,7 +20,7 @@ public class comparetwoString {
 			System.out.println("They don't match!");
 		}
 		
-		String part1 = "Hello";
+		String part1 = "Hello ";
 		String part2 = "WORLD";
 		String str4 = part1 + part2;
 		String str5 = "Hello World";
