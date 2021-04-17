@@ -1,47 +1,22 @@
 package JavaEssentialTraining;
 
-import java.util.Scanner;
+import JavaEssentialTraining
 
 public class ComplexCalci {
 
 	public static void main(String[] args) {
-
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter a numeric value: ");
-		String input = sc.next();
-		double d1 = Double.parseDouble(input);
-		System.out.println("Enter a numeric value: ");
-		String inputtwo = sc.next();
-		double d2 = Double.parseDouble(inputtwo);
-		System.out.println("Choose an operation (+, -, *, /)");
-		String inputthree = sc.next();
-
+		String s1 = getInput("Enter a numeric value: ");
+		String s2 = getInput("Enter a numeric value: ");
+		String op = getInput("Choose an operation (+ - * /): ");
+		
+		double result = 0;
+		
 		try {
-
-			switch (inputthree) {
+			switch(op) {
 			case "+":
-				double result = d1 + d2;
-				System.out.println("The addition of number is " + result);
-				break;
-			case "-":
-				double resultminus = d1 - d2;
-				System.out.println("The subtraction of number is " + resultminus);
-				break;
-			case "*":
-				double resultmultiply = d1 * d2;
-				System.out.println("The multiplication of number is " + resultmultiply);
-				break;
-			case "/":
-				double resultmodule = d1 / d2;
-				System.out.println("The division of number is " + resultmodule);
-				break;
-			default:
-				System.out.println("Unrecoganized operation!");
-				return;
+				result = MathHelper
 			}
-		} catch (Exception e) {
-			System.out.println("Number formatting exception " +e.getMessage());
-//			e.printStackTrace();
 		}
+		
 	}
 }
