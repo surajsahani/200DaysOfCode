@@ -12,3 +12,6 @@ public class ClassicSingleton {
       return instance;
    }
 }
+
+   
+   
